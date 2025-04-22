@@ -89,8 +89,15 @@ label[for="modified-file"]:hover {
 .controls {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.left-options {
+    display: flex;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -98,10 +105,14 @@ label[for="modified-file"]:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-.export-options {
-    margin-left: auto;
+.right-options {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .diff-stats {

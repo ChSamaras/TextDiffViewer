@@ -38,11 +38,13 @@
             </div>
         </div>
         <div class="controls">
-            <button id="compare-btn">Compare Texts</button>
-            <select id="diff-format">
-                <option value="line-by-line">Line by Line</option>
-                <option value="side-by-side">Side by Side</option>
-            </select>
+            <div class="left-options">
+                <button id="export-html-btn">Export HTML</button>
+                <select id="diff-format">
+                    <option value="side-by-side">Side by Side</option>
+                    <option value="line-by-line">Line by Line</option>
+                </select>
+            </div>
             <div class="options">
                 <label>
                     <input type="checkbox" id="wrap-lines" checked> 
@@ -57,8 +59,8 @@
                     Syntax highlighting
                 </label>
             </div>
-            <div class="export-options">
-                <button id="export-html-btn">Export HTML</button>
+            <div class="right-options">
+                <button id="compare-btn">Compare</button>
             </div>
         </div>
         <div class="diff-stats">
