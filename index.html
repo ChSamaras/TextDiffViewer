@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Diff Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Syntax highlighting with Prism.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Text Diff Viewer</h1>
+    </header>
+    <main>
+        <div class="input-section">
+            <div class="text-input">
+                <h2>Original Text</h2>
+                <textarea id="original-text" placeholder="Paste original text here..."></textarea>
+                <div class="file-input-container">
+                    <input type="file" id="original-file" accept=".txt,.md,.js,.html,.css,.py">
+                    <label for="original-file">Upload a file</label>
+                </div>
+            </div>
+            <div class="text-input">
+                <h2>Modified Text</h2>
+                <textarea id="modified-text" placeholder="Paste modified text here..."></textarea>
+                <div class="file-input-container">
+                    <input type="file" id="modified-file" accept=".txt,.md,.js,.html,.css,.py">
+                    <label for="modified-file">Upload a file</label>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="compare-btn">Compare Texts</button>
+            <select id="diff-format">
+                <option value="line-by-line">Line by Line</option>
+                <option value="side-by-side">Side by Side</option>
+            </select>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="wrap-lines" checked> 
+                    Wrap long lines
+                </label>
+                <label>
+                    <input type="checkbox" id="word-diff" checked> 
+                    Word-level diff
+                </label>
+                <label>
+                    <input type="checkbox" id="syntax-highlight" checked> 
+                    Syntax highlighting
+                </label>
+            </div>
+            <div class="export-options">
+                <button id="export-html-btn">Export HTML</button>
+            </div>
+        </div>
+        <div class="diff-stats">
+            <span id="diff-summary"></span>
+        </div>
+        <div class="diff-output">
+            <div id="diff-view"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Text Diff Viewer - Compare text files like GitHub</p>
+    </footer>
+    
+    <!-- Include the diff-match-patch library (local file) -->
+    <script src="diff_match_patch.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
