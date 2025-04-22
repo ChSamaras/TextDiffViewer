@@ -29,11 +29,11 @@ A powerful web application that compares two versions of text and highlights the
    - Type or paste directly into the text areas
    - Upload text files using the file input buttons
 3. Configure display options:
-   - Choose your preferred diff view format (Line-by-line or Side-by-side)
+   - Choose your preferred diff view format (Side-by-side or Line-by-line)
    - Toggle line wrapping for long lines
    - Enable/disable word-level diff highlighting
    - Enable/disable syntax highlighting for code
-4. Click "Compare Texts" to see the differences highlighted
+4. Click "Compare" button on the right side to see the differences highlighted
 5. Use the diff navigation features:
    - Click on line numbers to highlight specific lines
    - View diff statistics at the top of the results
